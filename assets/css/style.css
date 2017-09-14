@@ -23,4 +23,49 @@ h1 {
 	margin-top: 20px;
 	margin-right: 75%;
 	color: green;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#win-loss-counter {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+	margin-right: 75%;
+	color: green;
+}
+
+#crystals {
+	margin-top: 20px;
+
+}
+
+img {
+	border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+#total-score {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+	margin-right: 75%;
+	color: green;
+}
+
+#diamondGem{
+	padding: 10px;
+}
+
+#orangeGem{
+	padding: 10px;
+}
+
+#blueGem{
+	padding: 10px;
+}
+
+#yellowGem{
+	padding: 10px;
 }

@@ -3,11 +3,13 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>Crystals Collector Game</title>
+			<!--Link for jQuery-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-			<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+			<!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
 			<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 			<script src="assets/javascript/game.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			
 
 		</head>
 		<body>
@@ -28,32 +30,33 @@
 			</div>
 <!--Randomly generated number Div-->
 			<div id = "random-number">
-				<div>
-        			<h3>Random Number: </h3>
-        			<span id="random"></span>
-      			</div>
+				
 			</div>
 <!--Wins and Losses Div-->
 			<div id = "win-loss-counter">
 				<div>
-        			<h3>Wins: </h3>
+        			<h3>Wins: 0</h3>
         			<span id="wins"></span>
       			</div>
 
       			<div>
-        			<h3>Losses: </h3>
+        			<h3>Losses: 0</h3>
         			<span id="losses"></span>
       			</div>
 			</div>
 <!--Crystal Images-->
 			<div id = "crystals">
-				<img class = "diamondGem" src="assets/images/diamondgem.jpg" height="150px"; width="200px"><img>
+				<button id="diamondGem"> <img src="assets/images/diamondgem.jpg" height="150px"; width="200px"><img>
+				</button>
 
-				<img class = "orangeGem" src="assets/images/orangegem.jpg" height="150px"; width="200px"><img>
+				<button id="orangeGem"> <img src="assets/images/orangegem.jpg" height="150px"; width="200px"><img>
+				</button>
 
-				<img class = "blueGem" src="assets/images/bluegem.jpg" height="150px"; width="200px"><img>
+				<button id="blueGem"> <img src="assets/images/bluegem.jpg" height="150px"; width="200px"><img>
+				</button>
 
-				<img class = "yellowGem" src="assets/images/yellowgem.jpg" height="150px"; width="200px"><img>
+				<button id="yellowGem"> <img src="assets/images/yellowgem.jpg" height="150px"; width="200px"><img>
+				</button>
 
 			</div>
 <!--Total Score Div-->
@@ -63,9 +66,8 @@
         			<span id="score"></span>
       			</div>
 
+			
 			</div>
-
-			<div id = "score-box"></div>
-
+		
 		</body>
 </html>
