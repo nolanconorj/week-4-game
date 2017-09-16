@@ -30,6 +30,8 @@ var diamondGem = Math.floor(Math.random() * 12) + 1; {
 
       alert("You win!");
       $("#wins").html("Wins: " + wins++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
     // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
@@ -38,6 +40,8 @@ var diamondGem = Math.floor(Math.random() * 12) + 1; {
       // Then they are alerted with a loss.
       alert("You lose!!");
       $("#losses").html("Losses: " + losses++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
 	})
@@ -59,6 +63,8 @@ var orangeGem = Math.floor(Math.random() * 12) + 1; {
 
       alert("You win!");
       $("#wins").html("Wins: " + wins++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
     // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
@@ -67,6 +73,8 @@ var orangeGem = Math.floor(Math.random() * 12) + 1; {
       // Then they are alerted with a loss.
       alert("You lose!!");
       $("#losses").html("Losses: " + losses++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
 	});
@@ -84,6 +92,8 @@ var orangeGem = Math.floor(Math.random() * 12) + 1; {
 
       alert("You win!");
       $("#wins").html("Wins: " + wins++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
     // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
@@ -92,6 +102,8 @@ var orangeGem = Math.floor(Math.random() * 12) + 1; {
       // Then they are alerted with a loss.
       alert("You lose!!");
       $("#losses").html("Losses: " + losses++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
 	});
@@ -110,6 +122,8 @@ var orangeGem = Math.floor(Math.random() * 12) + 1; {
 
       alert("You win!");
       $("#wins").html("Wins: " + wins++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
     // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
@@ -118,6 +132,8 @@ var orangeGem = Math.floor(Math.random() * 12) + 1; {
       // Then they are alerted with a loss.
       alert("You lose!!");
       $("#losses").html("Losses: " + losses++);
+      $("#random-number").html("Random Number: " + score*0);
+      $("#total-score").html("Your Total Score Is: " + score*0);
     }
 
 	});
@@ -161,6 +177,3 @@ var orangeGem = Math.floor(Math.random() * 12) + 1; {
       //flipThatCoin(0);
 
   });
-
-
-       
