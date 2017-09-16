@@ -11,6 +11,12 @@ h1 {
 
 }
 
+h3 {
+	font-size: 30px;
+	font-weight: bold;
+
+}
+
 #game-instructions {
 	background-color: white;
 	padding: 20px;
@@ -35,6 +41,16 @@ h1 {
 	color: green;
 }
 
+#wins {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#losses{
+	font-size: 30px;
+	font-weight: bold;
+}
+
 #crystals {
 	margin-top: 20px;
 
@@ -52,6 +68,8 @@ img {
 	margin-top: 20px;
 	margin-right: 75%;
 	color: green;
+	font-size: 30px;
+	font-weight: bold;
 }
 
 #diamondGem{
