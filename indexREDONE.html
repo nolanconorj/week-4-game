@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crystal Game Redone</title>
+  <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
+  
+  
+
+</head>
+<body>
+<!--Title of Page-->
+    <h1 id="title">Crystals Collector!</h1>
+    <!--Game Instructions-->
+<div id = "game-instructions">
+      <h3>Instructions:</h3>
+      <p>You will be given a random number at the start of the game.</p>
+      <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+      <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+      <p>The value of each crystal is hidden from you until you click on it.</p>
+      <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
+
+  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+
+  <!-- Note that this div is now empty. We will fill it dynamically -->
+  <div id="crystals">
+  </div>
+
+  <div id = "total-score">
+      <div>
+        <h3>Your Total Score Is: </h3>
+        <span id="counter"></span>
+      </div>
+      </div>
+
+      <div id = "win-loss-counter">
+      <div>
+        <!--<h3>Wins: 0</h3>-->
+        <span id="wins"><h3>Wins: 0</h3></span>
+      </div>
+      <div>
+        <!--<h3>Losses: 0</h3>-->
+        <span id="losses"><h3>Losses: 0</h3></span>
+      </div>
+      </div>
+
+      <div id="clear-button">
+      <button id="clear"><h2>CLEAR</h2></button>
+      <p id="clr">*Press this button to clear the game at anytime.</p>
+      </div>
+
+  <!-- JAVASCRIPT  -->
+  <!-- ========================================= -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+  var wins = 1;
+  var losses = 1;
+
+  var targetNumber = Math.floor(Math.random() * 102) + 19;
+
+  $("#number-to-guess").text(targetNumber);
+  //console.log(targetNumber);
+
+  var counter = 0;
+
+ 
+  var numberOptions = [null]
+  var numberValue1 = Math.floor(Math.random() * 12) + 1;
+  var numberValue2 = Math.floor(Math.random() * 12) + 1;
+  var numberValue3 = Math.floor(Math.random() * 12) + 1;
+  var numberValue4 = Math.floor(Math.random() * 12) + 1;
+
+//RESET function
+  function initializeReset() {
+        targetNumber = Math.floor(Math.random() * 102) + 19;
+        console.log(targetNumber);
+        $("#number-to-guess").text(targetNumber);
+
+       //I CANT FIGURE OUT WHY THE RESET OF THE CRYSTALS WONT WORK
+        numberValue1 = Math.floor(Math.random() * 12) + 1;
+        numberValue2 = Math.floor(Math.random() * 12) + 1;
+        numberValue3 = Math.floor(Math.random() * 12) + 1;
+        numberValue4 = Math.floor(Math.random() * 12) + 1;
+
+        
+        
+        counter = 0;
+        $("#total-score").text("Your Total Score Is: " + counter);
+        
+
+        
+      }
+
+  // Next we create a for loop to create crystals for every numberOption.
+  for (var i = 0; i < numberOptions.length; i++) {
+
+    // For each iteration, we will create an imageCrystal
+    var clearCrystal = $("<img>");
+
+    // First each crystal will be given the class ".crystal-image".
+    // This will allow the CSS to take effect.
+    clearCrystal.addClass("crystal-image");
+
+    // Each imageCrystal will be given a src link to the crystal image
+    clearCrystal.attr("src", "https://www.extremetech.com/wp-content/uploads/2013/07/quartz-crystal-640x353.jpg");
+
+    // Each imageCrystal will be given a data attribute called data-crystalValue.
+    // This data attribute will be set equal to the array value.
+    clearCrystal.attr("data-crystalvalue", numberValue1);
+
+    // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
+    $("#crystals").append(clearCrystal);
+  }
+
+  for (var i = 0; i < numberOptions.length; i++) {
+
+    // For each iteration, we will create an imageCrystal
+    var orangeCrystal = $("<img>");
+
+    // First each crystal will be given the class ".crystal-image".
+    // This will allow the CSS to take effect.
+    orangeCrystal.addClass("crystal-image");
+
+    // Each imageCrystal will be given a src link to the crystal image
+    orangeCrystal.attr("src", "http://www.tysonsfineminerals.com/filemanager/photos/Quartz72716.jpg");
+
+    // Each imageCrystal will be given a data attribute called data-crystalValue.
+    // This data attribute will be set equal to the array value.
+    orangeCrystal.attr("data-crystalvalue", numberValue2);
+
+    // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
+    $("#crystals").append(orangeCrystal);
+  }
+
+  for (var i = 0; i < numberOptions.length; i++) {
+
+    // For each iteration, we will create an imageCrystal
+    var blueCrystal = $("<img>");
+
+    // First each crystal will be given the class ".crystal-image".
+    // This will allow the CSS to take effect.
+    blueCrystal.addClass("crystal-image");
+
+    // Each imageCrystal will be given a src link to the crystal image
+    blueCrystal.attr("src", "https://i.pinimg.com/736x/c6/9f/89/c69f8995a05d9193da9a604b2d474b88--rocks-and-minerals-crystals-minerals.jpg");
+
+    // Each imageCrystal will be given a data attribute called data-crystalValue.
+    // This data attribute will be set equal to the array value.
+    blueCrystal.attr("data-crystalvalue", numberValue3);
+
+    // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
+    $("#crystals").append(blueCrystal);
+  }
+
+  for (var i = 0; i < numberOptions.length; i++) {
+
+    // For each iteration, we will create an imageCrystal
+    var yellowCrystal = $("<img>");
+
+    // First each crystal will be given the class ".crystal-image".
+    // This will allow the CSS to take effect.
+    yellowCrystal.addClass("crystal-image");
+
+    // Each imageCrystal will be given a src link to the crystal image
+    yellowCrystal.attr("src", "https://i.pinimg.com/736x/a8/17/93/a817932d577c57981dd818e3d3862480--rocks-and-minerals-crystals-minerals.jpg");
+
+    // Each imageCrystal will be given a data attribute called data-crystalValue.
+    // This data attribute will be set equal to the array value.
+    yellowCrystal.attr("data-crystalvalue", numberValue4);
+
+    // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
+    $("#crystals").append(yellowCrystal);
+  }
+
+
+  // This time, our click event applies to every single crystal on the page. Not just one.
+  $(".crystal-image").on("click", function() {
+
+    // Determining the crystal's value requires us to extract the value from the data attribute.
+    // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
+    // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
+    // Since attributes on HTML elements are strings, we must convert it to an integer before adding to the counter
+    
+    var crystalValue = ($(this).attr("data-crystalvalue"));
+    crystalValue = parseInt(crystalValue);
+    // We then add the crystalValue to the user's "counter" which is a global variable.
+    // Every click, from every crystal adds to the global counter.
+    counter += crystalValue;
+
+
+    // All of the same game win-lose logic applies. So the rest remains unchanged.
+    
+    $("#total-score").text("Your Total Score Is: " + counter);
+    
+
+    if (counter === targetNumber) {
+      alert("You win!");
+      $("#wins").html("Wins: " + wins++);
+      initializeReset();
+     
+    
+    }
+
+    else if (counter >= targetNumber) {
+      alert("You lose!!");
+      $("#losses").html("Losses: " + losses++);
+      initializeReset();
+    }
+
+    $("#clear").on("click", function() {
+      //alert("click");
+
+        // Call initializeCalculater so we can reset the state of our app
+        initializeReset();
+
+      });
+
+  });
+
+  </script>
+</body>
+</html>
